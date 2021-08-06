@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --Red: hsl(0, 100%, 74%);
+  --Green: hsl(154, 59%, 51%);
+
+  --Blue: hsl(248, 32%, 49%);
+
+  --DarkBlue: hsl(249, 10%, 26%);
+  --GrayishBlue: hsl(246, 25%, 77%);
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  background-image: url(images/bg-intro-mobile.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: var(--Red);
+}
+
+.container {
+  width: 80%;
+  margin: 30px auto;
+}
+
+.description {
+  width: 100%;
+  color: white;
+  text-align: center;
+  margin: 50px 0;
+}
+
+.form-div {
+  width: 100%;
+  max-width: 400px;
+  margin: 0px auto;
+}
+.form-div > button {
+  width: 100%;
+  margin: 10px 0;
+  padding: 20px 40px;
+  color: white;
+  background: var(--Blue);
+  border-radius: 7px;
+  outline: none;
+  border: none;
+  box-shadow: 0px 8px #dd6767;
+  font-size: 18px;
+}
+.form {
+  background: white;
+  border-radius: 7px;
+}
+form {
+  width: 80%;
+  margin: 20px auto;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px 0px;
+  padding-left: 10px;
+  font-size: 15px;
+  border-radius: 7px;
+  border: 1px solid var(--GrayishBlue);
+}
+::placeholder {
+  padding-left: 10px;
+  color: var(--DarkBlue);
+  font-weight: 600;
+}
+form > button {
+  align-self: stretch;
+  width: 100%;
+  margin: 10px auto;
+  padding: 10px 0;
+  color: white;
+  background: var(--Green);
+  border-radius: 7px;
+  outline: none;
+  border: none;
+  box-shadow: 0px 5px #30ba7f;
+  font-size: 18px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 750px) {
+  body {
+    background-image: url(images/bg-intro-desktop.png);
+  }
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .description {
+    width: 45%;
+    text-align: left;
+  }
+
+  .form-div {
+    width: 45%;
+  }
+}
