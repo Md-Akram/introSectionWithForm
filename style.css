@@ -65,20 +65,43 @@ form {
   /* align-items: center; */
   /* justify-content: center; */
 }
+
+.form-grp {
+  position: relative;
+}
+
 input {
   width: 100%;
-  margin: 10px 0;
+  margin: 5px 0;
   padding: 10px 0px;
   padding-left: 10px;
   font-size: 15px;
   border-radius: 7px;
   border: 1px solid var(--GrayishBlue);
 }
-::placeholder {
-  padding-left: 10px;
-  color: var(--DarkBlue);
-  font-weight: 600;
+.form-grp.error input {
+  border: 1px solid var(--Red);
 }
+
+.form-grp > i {
+  position: absolute;
+  top: 13px;
+  right: 10px;
+  visibility: hidden;
+}
+.form-grp.error > i {
+  visibility: visible;
+}
+.form-grp > small {
+  display: block;
+  text-align: right;
+  color: var(--Red);
+  visibility: hidden;
+}
+.form-grp.error > small {
+  visibility: visible;
+}
+
 form > button {
   align-self: stretch;
   width: 100%;
